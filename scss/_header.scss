@@ -24,6 +24,7 @@
             width: 55vw;
             flex-basis: 10%;
             align-self: flex-start;
+            text-transform: uppercase;
         }
 
         @include media1024px {
@@ -33,7 +34,7 @@
 
         @include media1366px {
             font-size: 6em;
-            width: 40vw;
+            width: 51vw;
             margin-top: 20%;
         }
 
@@ -51,7 +52,7 @@
             }
 
             @include media1024px {
-                margin-top: -2%;
+                margin-top: -1%;
                 font-size: 2.7em;
             }
 
@@ -114,7 +115,7 @@
         @include media1800px {
             width: 70%;
             top: -20%;
-            left: 30%;
+            left: 50%;
         }
     }
 
@@ -138,11 +139,15 @@
         }
 
         @include media1024px {
-            bottom: 50%;
+            bottom: 42%;
         }
 
         @include media1366px {
             bottom: 27%;
+        }
+
+        @include media1800px {
+            bottom: 50%;
         }
     }
 }

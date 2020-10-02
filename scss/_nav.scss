@@ -49,6 +49,10 @@
         @include media1366px {
             padding-left: 40%;
         }
+
+        @include media1800px {
+            padding-left: 60%;
+        }
     }
 
     &__listItem {

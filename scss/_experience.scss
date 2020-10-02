@@ -1,0 +1,361 @@
+.exp {
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    font-family: $josefinFont;
+    display: grid;
+    grid-template-rows: 200px auto auto auto auto;
+    overflow: hidden;
+
+    @include media1024px {
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 100px repeat(3, 535px);
+        grid-template-areas: "title title"
+            "web-design web-design"
+            "graphic graphic"
+            "web-dev web-dev"
+            "button button";
+        grid-gap: 30px;
+    }
+
+    @include media1800px {
+        grid-template-rows: 100px repeat(3, 650px);
+    }
+
+    &__container {
+        @include media1024px {
+            grid-area: title;
+            position: relative;
+            width: 100vw;
+        }
+    }
+
+    &__title {
+        font-size: 1.9em;
+        text-align: center;
+
+        @include media768px {
+            font-size: 2.4em;
+        }
+
+
+    }
+
+    &__description {
+        font-size: 2.2em;
+        text-align: center;
+        width: 80vw;
+        margin: 0 auto;
+
+        @include media768px {
+            font-size: 2.8em;
+        }
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        padding: 10px;
+        margin: 30px auto;
+        height: 60vh;
+        width: 80vw;
+        border-top: 1px solid black;
+        box-shadow: 0px 50px 25px rgba(148, 148, 148, 0.315);
+        border-radius: 15px;
+        padding-bottom: 50px;
+
+        @include media1024px {
+            border: none !important;
+        }
+
+
+
+        img {
+            position: relative;
+            top: 6%;
+            left: 5%;
+            width: 25%;
+
+            @include media768px {
+                width: 20%;
+            }
+        }
+
+        p:nth-of-type(1) {
+            font-size: 2.2em;
+
+            @include media768px {
+                font-size: 3.5em;
+            }
+
+            @include media1024px {
+                font-size: 2.7em;
+            }
+
+            @include media1366px {
+                font-size: 2.5em;
+            }
+        }
+
+        p:nth-of-type(2) {
+            font-size: 1.8em;
+
+            @include media768px {
+                font-size: 2.3em;
+            }
+
+            @include media1024px {
+                font-size: 2.2em;
+            }
+
+            @include media1366px {
+                font-size: 2em;
+            }
+        }
+    }
+
+    &__section:nth-child(odd) {
+        @include media1024px {
+            height: 17vh;
+            width: 50vw;
+            justify-self: center;
+            align-self: center;
+        }
+
+        @include media1366px {
+            height: 34vh;
+        }
+
+        p:nth-of-type(1) {
+            font-size: 3.5em;
+            text-align: center;
+
+            @include media1024px {
+                font-size: 2.7em;
+            }
+
+            @include media1366px {
+                font-size: 2.5em;
+            }
+        }
+
+        p:nth-of-type(2) {
+            font-size: 3.5em;
+            text-align: center;
+
+            @include media1024px {
+                font-size: 2.7em;
+            }
+
+            @include media1366px {
+                font-size: 2.3em;
+            }
+        }
+
+        p:nth-of-type(3) {
+            font-size: 2.5em;
+            text-align: center;
+
+            @include media1024px {
+                font-size: 1.8em;
+            }
+
+            @include media1366px {
+                font-size: 1.5em;
+            }
+        }
+
+        span {
+            position: relative;
+            height: 2.5px;
+            background-color: $main-color;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 100%;
+                height: 2.5px;
+                background-color: lighten($main-color, 30%);
+            }
+        }
+    }
+
+    &__section:nth-child(even) {
+        @include media1024px {
+            height: 30vh;
+            width: 30vw;
+        }
+
+        @include media1366px {
+            height: 55vh;
+        }
+
+        span {
+            position: relative;
+            width: 25px;
+            height: 2.5px;
+            background-color: $main-color;
+
+            @include media768px {
+                width: 40px;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                height: 2.5px;
+                width: 25px;
+                background-color: $main-color;
+                position: absolute;
+
+                @include media768px {
+                    width: 40px;
+                }
+            }
+
+            &::before {
+                left: 150%;
+            }
+
+            &::after {
+                left: 300%;
+            }
+        }
+    }
+
+    &__webSection {
+        position: relative;
+
+        @include media1024px {
+            grid-area: web-design;
+        }
+
+        &-first {
+            padding-top: 50px;
+            order: 1;
+
+        }
+
+        &-second {
+            order: 2;
+
+            span {
+                width: 95%;
+
+                &::after {
+                    width: 5%;
+                }
+            }
+
+            border-top: none;
+            border-bottom: 1px solid black;
+
+            hr {
+                top: 38%;
+                width: 85%;
+            }
+        }
+
+
+    }
+
+    &__graphicSection {
+
+        @include media1024px {
+            grid-area: graphic;
+        }
+
+        &-first {
+            order: 4;
+            padding-top: 50px;
+
+            @include media1024px {
+                position: relative;
+                right: -40%;
+            }
+
+
+        }
+
+        &-second {
+            order: 3;
+            margin-top: 10%;
+            border-top: none;
+            border-bottom: 1px solid black;
+
+            @include media1024px {
+                position: relative;
+                left: 8%;
+            }
+
+            span {
+                width: 85%;
+
+                &::after {
+                    width: 15%;
+                }
+            }
+
+            hr {
+                top: 38%;
+                width: 75%;
+            }
+        }
+    }
+
+    &__devSection {
+        @include media1024px {
+            grid-area: web-dev;
+        }
+
+        &-first {
+            order: 5;
+        }
+
+        &-second {
+            order: 6;
+            border-top: none;
+            border-bottom: 1px solid black;
+
+            span {
+                width: 70%;
+
+                &::after {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+.button {
+    width: 45%;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: $main-color;
+    text-decoration: none;
+    color: white;
+    font-size: 1.8em;
+    order: 7;
+
+    .fas {
+        margin-left: 10px;
+        text-align: center;
+        margin-top: 2px;
+        font-size: 0.8em;
+    }
+}
+
+.exp__button {
+    margin: 0 auto;
+
+    @include media1024px {
+        grid-area: button;
+        width: 20%;
+        margin: 0 auto 0 80%;
+    }
+}
