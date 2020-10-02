@@ -1,0 +1,168 @@
+.nav {
+    position: fixed;
+    right: -250px;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #fff;
+
+    @media(min-width:1024px) {
+        transition: all 0s;
+        position: absolute;
+        width: 100vw;
+        height: 100px;
+        position: absolute;
+        right: 0;
+        left: 32%;
+        top: 0;
+        background-color: transparent;
+    }
+
+    @media(min-width:1366px) {
+        left: 45%;
+    }
+
+    @media(min-width: 1800px) {
+        left: 50%;
+    }
+
+    &.active {
+        animation: navAnim 0.5s ease-in-out both;
+    }
+
+    &.close {
+        animation: navAnimClosing 0.5s ease-in-out both;
+
+    }
+
+    &__list {
+        display: grid;
+        grid-template-rows: repat(5, 1fr);
+        height: 100%;
+        flex-direction: column;
+        font-family: $montserratFont;
+
+        @media(min-width:1024px) {
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(5, 140px);
+            justify-items: center;
+            align-items: center;
+        }
+    }
+
+    &__listItem {
+        list-style: none;
+        flex-basis: 12%;
+        margin-top: 15px;
+        position: relative;
+        animation: endBurgerAnim 0.6s linear;
+        cursor: pointer;
+
+        :nth-child(1) {
+            font-weight: bold;
+        }
+
+        @media(min-width:1024px) {
+            &:last-child {
+                margin-right: 25px;
+            }
+        }
+
+        &.active {
+            animation: burgerAnim 0.5s linear both;
+
+            &:nth-child(1) {
+                animation-delay: .2s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: .4s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: .6s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: .8s;
+            }
+
+            &:nth-child(5) {
+                animation-delay: 1s;
+            }
+        }
+    }
+
+    &__listItem:nth-child(1) {
+        margin-top: 25px;
+    }
+
+    &__item {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        color: rgb(65, 65, 65);
+        font-size: 1.6em;
+    }
+}
+
+.menuButton {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 38px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+    @media(min-width:1024px) {
+        display: none;
+    }
+
+    &__burger {
+        width: 30px;
+        height: 4px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        box-shadow: 0 3px 5px rgba(216, 208, 208, 0.404);
+        transition: all .5s ease-in-out;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 30px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(216, 208, 208, 0.404);
+            transition: all .5s ease-in-out;
+        }
+
+        &::before {
+            transform: translateY(-10px);
+        }
+
+        &::after {
+            transform: translateY(10px);
+        }
+    }
+
+    &.open &__burger {
+        transform: translateX(-50px);
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &.open &__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    &.open &__burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+}
