@@ -29,6 +29,7 @@ burger = () => {
 menuButton.addEventListener('click', burger);
 
 const menuArray = [document.querySelector('.header '), document.querySelector('.aboutUs'), document.querySelector('.exp'), document.querySelector('.portfolio'), document.querySelector('.contact')];
+
 for (let i = 0; i < listItem.length; i++) {
     listItem[i].addEventListener('click', () => {
         setTimeout(() => {
@@ -42,9 +43,8 @@ for (let i = 0; i < listItem.length; i++) {
         nav.classList.remove('active');
         nav.classList.add('close');
         menuButton.classList.remove('open');
-
     })
-}
+};
 
 const buttonSrc = document.getElementById('changeSrc');
 const navImage = document.querySelector('.nav__background');
@@ -54,7 +54,6 @@ window.addEventListener('resize', () => {
         navImage.classList.remove('img-none')
     } else {
         buttonSrc.src = 'svg/webDesign-white.svg';
-
         navImage.classList.add('img-none')
     }
 })
@@ -63,6 +62,18 @@ window.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth > 1023) {
 
         navImage.classList.add('img-none');
+        buttonSrc.src = 'svg/webDesign-white.svg'
 
     }
+})
+
+const portfolioImages = [...document.querySelectorAll('.portfolio__container-wrapper')];
+
+portfolioImages.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.add('active');
+        setTimeout(() => {
+            item.classList.remove('active');
+        }, 4000)
+    })
 })

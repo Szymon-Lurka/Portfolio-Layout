@@ -118,7 +118,7 @@
 
     &__section:nth-child(odd) {
         @include media1024px {
-            height: 17vh;
+            height: 22vh;
             width: 50vw;
             justify-self: center;
             align-self: center;
@@ -185,7 +185,7 @@
 
     &__section:nth-child(even) {
         @include media1024px {
-            height: 30vh;
+            height: 41vh;
             width: 30vw;
         }
 
@@ -353,6 +353,10 @@
     color: white;
     font-size: 1.8em;
     order: 7;
+
+    @include media1024px {
+        width: 160px;
+    }
 
     .fas {
         margin-left: 10px;

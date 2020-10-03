@@ -1,0 +1,245 @@
+.testimonials {
+    font-family: $josefinFont;
+    overflow: hidden;
+    margin-top: 100px;
+    position: relative;
+
+    &__title {
+        font-size: 1.7em;
+        text-align: center;
+        color: $main-color;
+
+        @include media768px {
+            font-size: 2.1em;
+        }
+
+        @include media1024px {
+            font-size: 2.3em;
+        }
+
+        @include media1366px {
+            font-size: 2.5em;
+        }
+    }
+
+    &__description {
+        font-size: 3em;
+        text-align: center;
+
+        @include media768px {
+            font-size: 3.3em;
+        }
+
+        @include media1024px {
+            font-size: 3.5em;
+        }
+
+        @include media1366px {
+            font-size: 3.7em;
+        }
+
+        &-second {
+            width: 80vw;
+            font-size: 2.3em;
+            margin: auto;
+            text-align: center;
+
+            @include media768px {
+                font-size: 2.9em;
+            }
+
+            @include media1024px {
+                font-size: 3.1em;
+            }
+
+            @include media1366px {
+                font-size: 3.3em;
+            }
+
+        }
+    }
+
+    &-shapeFirst,
+    &-shapeSecond,
+    &-shapeThird {
+        position: absolute;
+    }
+
+    &-shapeFirst {
+        z-index: -1;
+
+        top: 68%;
+        right: 5%;
+
+        @include media768px {
+            right: 15%;
+        }
+
+        @include media1800px {
+            right: 30%;
+        }
+    }
+
+    &-shapeSecond {
+        z-index: -1;
+
+        @include media768px {
+            left: 40%;
+            top: 10%;
+        }
+
+        @include media1800px {
+            width: 40%;
+            top: 0;
+            left: 18%;
+        }
+    }
+
+    &-shapeThird {
+        top: 50%;
+        left: 5%;
+        z-index: -1;
+    }
+
+    &__background {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15%;
+        margin-top: -100px;
+
+        @include media768px {
+            margin-top: -150px;
+            width: 10%;
+        }
+
+        @include media1024px {
+            width: 7%;
+        }
+
+        @include media1366px {
+            width: 6%;
+        }
+
+        @include media1800px {
+            width: 4%;
+        }
+
+    }
+
+    &__author {
+        text-align: center;
+        font-size: 3em;
+        font-weight: 400;
+        margin-top: 50px;
+
+        @include media768px {
+            font-size: 3.4em;
+        }
+
+        @include media1024px {
+            font-size: 3.6em;
+        }
+
+        &-title {
+            text-align: center;
+            font-size: 1.2em;
+            margin: -3% auto 8%;
+
+            @include media768px {
+                font-size: 1.4em;
+            }
+
+            @include media1024px {
+                font-size: 1.6em;
+            }
+
+            @include media1366px {
+                margin: -2% auto 8%;
+            }
+
+            @include media1800px {
+                margin: -1% auto 8%;
+            }
+
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+
+        &-dots {
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            margin-bottom: -30px;
+
+            @include media768px {
+                margin-top: -40px;
+            }
+
+            @include media1366px {
+                margin-top: -50px;
+            }
+
+            @include media1800px {
+                margin-top: -60px;
+            }
+
+        }
+
+        &-dot {
+            height: 7px;
+            width: 7px;
+            background-color: #000;
+            border-radius: 50%;
+            margin: 20px 0 auto 4px;
+
+            &:nth-of-type(2) {
+                background-color: $main-color;
+            }
+        }
+
+        &-images {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        &-image {
+            position: relative;
+            margin-top: 50px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+
+            @include media768px {
+                width: 100px;
+                height: 100px;
+            }
+
+            &:nth-of-type(1) {
+                position: relative;
+                top: -10px;
+                left: 35px;
+                z-index: -1;
+                filter: brightness(65%);
+                transform: scale(0.7);
+            }
+
+            &:nth-of-type(2) {
+                border: 3px solid $main-color;
+            }
+
+            &:nth-of-type(3) {
+                position: relative;
+                top: -10px;
+                right: 35px;
+                z-index: -1;
+                filter: brightness(65%);
+                transform: scale(0.7);
+            }
+        }
+    }
+}

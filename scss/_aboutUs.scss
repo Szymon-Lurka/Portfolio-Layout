@@ -6,6 +6,7 @@
     margin-top: 80px;
     padding-top: 40px;
 
+
     @media include1024px {
         margin-top: 0;
         padding-top: 0;
@@ -70,6 +71,37 @@
 
         @include media1800px {
             right: 57%;
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        width: 20%;
+        left: 15px;
+        top: 13px;
+
+        @include media768px {
+            left: 105px;
+            top: 0;
+            width: 15%;
+        }
+
+        @include media1024px {
+            width: 12%;
+            left: 35px;
+            top: 35px;
+        }
+
+        @include media1366px {
+            width: 7%;
+            top: 0px;
+            left: 105px;
+        }
+
+        @include media1800px {
+            width: 5%;
+            top: 0;
+            left: 160px;
         }
     }
 
@@ -162,7 +194,7 @@
         }
 
         @include media1024px {
-            width: 160px;
+            width: 220px;
         }
     }
 

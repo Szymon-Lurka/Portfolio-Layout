@@ -1,0 +1,182 @@
+.portfolio {
+    width: 100vw;
+    overflow: hidden;
+    font-family: $josefinFont;
+    padding-bottom: 20px;
+
+    &__button {
+        @include media1024px {
+            width: 300px;
+        }
+
+        @include media1366px {
+            width: 360px;
+        }
+
+        @include media1800px {
+            width: 400px;
+        }
+    }
+
+    @include media1366px {
+        height: 100vh;
+    }
+
+    &__text {
+        height: 100px;
+        margin-bottom: 50px;
+
+        @include media1366px {
+            margin-bottom: 150px;
+        }
+
+        &-title {
+            text-align: center;
+            color: $main-color;
+
+            @include media1366px {
+                font-size: 2.4em;
+            }
+        }
+
+        &-description {
+            text-align: center;
+            font-size: 3em;
+
+            @include media1366px {
+                font-size: 3.6em;
+            }
+        }
+
+        &-answer {
+            text-align: center;
+            font-size: 1.5em;
+
+            @include media1366px {
+                font-size: 2em;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @include media768px {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &-wrapper {
+            //linear-gradient(#27dec071),
+            width: 300px;
+            height: 300px;
+            margin-bottom: 50px;
+            position: relative;
+            transition: .5s;
+
+            @include media768px {
+                flex-basis: 45%;
+            }
+
+            @include media1024px {
+                flex-basis: 20%;
+            }
+
+            @include media1366px {
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 100px rgba(150, 150, 150, 1);
+                }
+            }
+
+            @include media1800px {
+                height: 450px;
+            }
+
+            &.active {
+                &::before {
+                    display: block;
+                    font-size: 2.5em;
+                    position: absolute;
+                    text-align: center;
+                    width: 100%;
+                    top: 25%;
+                    color: white;
+                    z-index: 1;
+                }
+
+                &::after {
+                    content: '';
+                    background: url(../svg/portfolioPlus.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 70px;
+                    height: 70px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 50%;
+                }
+            }
+
+            &:nth-of-type(1) {
+                background: url(../svg/fish.svg) center no-repeat;
+                background-size: cover;
+            }
+
+            &.active:nth-of-type(1) {
+                background: linear-gradient(#27dec0da), url(../svg/fish.svg) center no-repeat;
+                background-size: cover;
+
+                &::before {
+                    content: 'Fish Site';
+                }
+            }
+
+            &:nth-of-type(2) {
+                background: url(../svg/portfolioRandom.svg);
+            }
+
+            &.active:nth-of-type(2) {
+                background: linear-gradient(#27dec0da), url(../svg/portfolioRandom.svg) center no-repeat;
+                background-size: cover;
+
+                &::before {
+                    content: 'Random Site';
+                }
+            }
+
+            &:nth-of-type(3) {
+                background: url(../svg/fish.svg) center no-repeat;
+                background-size: cover;
+            }
+
+            &.active:nth-of-type(3) {
+                background: linear-gradient(#27dec0da), url(../svg/fish.svg) center no-repeat;
+                background-size: cover;
+
+                &::before {
+                    content: 'Fish Site';
+                }
+            }
+
+            &:nth-of-type(4) {
+                background: url(../svg/UXportfolio.svg);
+            }
+
+            &.active:nth-of-type(4) {
+                background: linear-gradient(#27dec0da), url(../svg/UXportfolio.svg) center no-repeat;
+                background-size: cover;
+
+                &::before {
+                    content: 'Phone Mockup';
+                }
+            }
+        }
+    }
+
+}

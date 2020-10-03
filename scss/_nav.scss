@@ -81,6 +81,10 @@
             @include media768px {
                 font-size: 6em;
             }
+
+            @include media1024px {
+                font-size: 4em;
+            }
         }
     }
 
@@ -93,6 +97,10 @@
 
         @include media768px {
             font-size: 4em;
+        }
+
+        @include media1024px {
+            font-size: 2em;
         }
     }
 }
