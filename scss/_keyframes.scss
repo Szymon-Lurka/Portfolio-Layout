@@ -1,24 +1,5 @@
-@keyframes burgerAnim {
-    0% {}
-
-    100% {
-        left: 0
-    }
-}
-
-@keyframes endBurgerAnim {
-    0% {
-        left: 0
-    }
-
-    100% {
-        left: 100%
-    }
-
-
-}
-
 @keyframes navAnim {
+
     100% {
         right: 0;
     }
@@ -27,9 +8,11 @@
 @keyframes navAnimClosing {
     0% {
         right: 0;
+
     }
 
     100% {
         right: 100%;
+
     }
 }

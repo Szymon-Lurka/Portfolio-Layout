@@ -47,10 +47,22 @@ for (let i = 0; i < listItem.length; i++) {
 }
 
 const buttonSrc = document.getElementById('changeSrc');
+const navImage = document.querySelector('.nav__background');
 window.addEventListener('resize', () => {
     if (window.innerWidth < 1024) {
         buttonSrc.src = 'svg/webDesign.svg';
+        navImage.classList.remove('img-none')
     } else {
         buttonSrc.src = 'svg/webDesign-white.svg';
+
+        navImage.classList.add('img-none')
+    }
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth > 1023) {
+
+        navImage.classList.add('img-none');
+
     }
 })
