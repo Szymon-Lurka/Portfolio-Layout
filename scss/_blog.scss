@@ -1,0 +1,187 @@
+.blog {
+    font-family: $josefinFont;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+
+    @include media1024px {
+        height: 60vh;
+    }
+
+    @include media1366px {
+        height: 100vh;
+    }
+
+    &-background {
+        position: absolute;
+        z-index: -10;
+        top: 50%;
+        right: -50px;
+        width: 100%;
+
+        @include media768px {
+            top: 40%;
+            right: -300px;
+            width: 100%;
+        }
+
+        @include media1024px {
+            width: 74%;
+            top: 0px;
+            right: -100px;
+        }
+
+        @include media1366px {
+            width: 55%;
+            right: 0;
+        }
+    }
+
+    &__title {
+        font-size: 1.4em;
+        color: $main-color;
+        text-align: center;
+
+        @include media1024px {
+            font-size: 2em;
+        }
+    }
+
+    &__description {
+        font-size: 2.4em;
+        text-align: center;
+        font-weight: bold;
+
+        @include media1024px {
+            font-size: 2.8em;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @include media1024px {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &-card {
+            width: 80vw;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0px 5px 5px rgb(173, 173, 173);
+            position: relative;
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            background-color: white;
+
+
+            @include media768px {
+                width: 50vw;
+            }
+
+            @include media1024px {
+                flex-basis: 25%;
+            }
+
+            @include media1366px {
+                flex-basis: 23%;
+
+            }
+
+
+            span {
+                position: relative;
+                width: 25px;
+                height: 3px;
+                background-color: $main-color;
+                left: 5%;
+
+                &::before {
+                    content: '';
+                    height: 3px;
+                    width: 25px;
+                    background-color: $main-color;
+                    position: absolute;
+                    left: 150%;
+                }
+            }
+
+            &-img {
+                width: 100%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            &-title {
+                color: $main-color;
+                font-size: 1.6em;
+                margin-left: 5%;
+
+                @include media1024px {
+                    font-size: 1.8em;
+                }
+            }
+
+            &-description {
+                font-size: 1.6em;
+                margin: 5%;
+
+                @include media1024px {
+                    font-size: 1.8em;
+                }
+            }
+
+            &-info {
+                font-size: 1.4em;
+                margin-left: 5%;
+
+                @include media1024px {
+                    font-size: 1.6em;
+                }
+            }
+
+            &-button {
+                position: relative;
+                bottom: 10px;
+                font-size: 1.7em;
+                margin: 20px auto auto 20px;
+                padding: 10px;
+                color: $main-color;
+                text-decoration: none;
+
+                @include media1024px {
+                    font-size: 2em;
+                }
+
+                .fas {
+                    position: absolute;
+                    font-size: 1em;
+                    top: 30%;
+                    right: -20%;
+
+                    @include media1024px {
+                        top: 25%;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+    &__button {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media768px {
+            bottom: 15px;
+        }
+    }
+}

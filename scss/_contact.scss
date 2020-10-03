@@ -1,0 +1,63 @@
+.contact {
+    // margin-top: 20%;
+    font-family: $josefinFont;
+    overflow: hidden;
+    padding-bottom: 20px;
+
+    &__title {
+        text-align: center;
+        color: $main-color;
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    &__form {
+        width: 80vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 0 auto;
+
+        &-nameInput,
+        &-emailInput,
+        &-phoneInput,
+        &-budgetInput {
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 2px solid $main-color;
+            padding: 5px;
+            font-size: 2em;
+            text-align: center;
+            flex-basis: 86%;
+
+            @include media1024px {
+                flex-basis: 40%;
+            }
+        }
+
+        &-textArea {
+            flex-basis: 87%;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 2px solid $main-color;
+            padding: 5px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        &-submitInput {
+            width: 150px;
+            font-size: 1.8em;
+            border: none;
+
+            @include media1024px {
+                width: 200px;
+            }
+        }
+    }
+
+
+}

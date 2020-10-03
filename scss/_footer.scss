@@ -1,0 +1,130 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    font-family: $josefinFont;
+    margin-top: 100px;
+    overflow: hidden;
+
+    @include media1024px {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    &__background {
+        position: relative;
+
+        @include media1024px {
+            left: 15%;
+            top: 15%;
+        }
+
+
+    }
+
+    &__title {
+        width: 80vw;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+
+        @include media1024px {
+            flex-basis: 60%;
+            text-align: right;
+            margin: 0 20px auto;
+        }
+
+        &-first {
+            width: 80vw;
+            font-size: 2.2em;
+
+            @include media768px {
+                font-size: 2.6em;
+            }
+        }
+
+        &-second {
+            margin-top: 0px;
+            font-size: 1em;
+            font-weight: 400;
+        }
+    }
+
+    &__description {
+        width: 80vw;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 1.3em;
+
+        @include media768px {
+            font-size: 1.8em;
+        }
+
+        @include media1024px {
+            flex-basis: 30%;
+            text-align: left;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        justify-content: space-evenly;
+
+        @include media1024px {
+            flex-basis: 40%;
+            margin-right: 50px;
+            justify-content: space-between;
+        }
+
+        &-title {
+            color: $main-color;
+
+            @include media768px {
+                font-size: 1.8em;
+                flex-basis: 20%;
+            }
+
+            @include media1024px {
+                font-size: 1.7em;
+            }
+        }
+
+        &-description {
+            font-size: 1.2em;
+
+            @include media768px {
+                font-size: 2em;
+            }
+
+            @include media1024px {
+                font-size: 1.7em;
+            }
+        }
+
+        // flex-direction: column;
+    }
+
+    &__line {
+        width: 100vw;
+        height: 1.5px;
+        background-color: $main-color;
+
+        @include media768px {
+            height: 2px;
+        }
+    }
+
+    &__copyrights {
+        text-align: center;
+
+        @include media768px {
+            font-size: 1.5em;
+        }
+
+        @include media1024px {
+            flex-basis: 100%;
+            font-size: 2em;
+        }
+    }
+}

@@ -77,3 +77,7 @@ portfolioImages.forEach(item => {
         }, 4000)
     })
 })
+
+setTimeout(function () {
+    $('.loader__bg').fadeToggle()
+}, 2500);

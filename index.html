@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <div class="menuButton">
         <div class="menuButton__burger"></div>
     </div>
@@ -20,7 +19,7 @@
         <img src="svg/shapes.svg" alt="circle" class="nav__background nav__background-shapes">
         <ul class="nav__list">
             <li class="nav__listItem">
-                <p class="nav__item home"><i class="fas fa-home"></i></p>
+                <p class="nav__item home">Home</p>
             </li>
             <li class="nav__listItem">
                 <p class="nav__item">About Us</p>
@@ -191,12 +190,91 @@
 
             </div>
         </section>
+        <section class="blog">
+            <img src="svg/secondBackground.svg" alt="background" class="blog-background">
+            <h2 class="blog__title">Blog</h2>
+            <p class="blog__description">Trendy News Feed</p>
+            <div class="blog__container">
+                <div class="blog__container-card">
+                    <img src="img/model-2911332_640.jpg" alt="" class="blog__container-card-img">
+                    <h2 class="blog__container-card-title">26th</h2>
+                    <p class="blog__container-card-description">I enjoy something Lorem ipsum dolor sit amet
+                        consectetur.</p>
+                    <span></span>
+                    <p class="blog__container-card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquid, rem!</p>
+                    <a href="#" class="blog__container-card-button">Know<i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="blog__container-card">
+                    <img src="img/model-2911332_640.jpg" alt="" class="blog__container-card-img">
+                    <h2 class="blog__container-card-title">26th</h2>
+                    <p class="blog__container-card-description">I enjoy something Lorem ipsum dolor sit amet
+                        consectetur.</p>
+                    <span></span>
+                    <p class="blog__container-card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquid, rem!</p>
+                    <a href="#" class="blog__container-card-button">Know<i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="blog__container-card">
+                    <img src="img/model-2911332_640.jpg" alt="" class="blog__container-card-img">
+                    <h2 class="blog__container-card-title">26th</h2>
+                    <p class="blog__container-card-description">I enjoy something Lorem ipsum dolor sit amet
+                        consectetur.</p>
+                    <span></span>
+                    <p class="blog__container-card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquid, rem!</p>
+                    <a href="#" class="blog__container-card-button">Know<i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <a href="#" class="blog__button button">View All</a>
+        </section>
+        <section class="contact" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600"
+            data-aos-delay="500">
+            <h2 class="contact__title">Contact us</h2>
+            <p class="contact__description">Send Us a Message</p>
+            <form action="" class="contact__form">
+                <input type="text" class="contact__form-nameInput" placeholder="Name">
+                <input type="email" class="contact__form-emailInput" placeholder="Email">
+                <input type="text" class="contact__form-phoneInput" placeholder="Number">
+                <input type="text" class="contact__form-budgetInput" placeholder="Budget (IN USD)">
+                <textarea name="" id="" cols="30" rows="10" class="contact__form-textArea"
+                    placeholder="Message"></textarea>
+                <input type="submit" class="contact__form-submitInput button" value="Send message">
+            </form>
+        </section>
     </main>
+    <footer class="footer">
+        <img src="svg/eyes.svg" alt="eyes" class="footer__background">
+        <div class="footer__title">
+            <h2 class="footer__title-first">We are digital designer living in United States.
+                <p class="footer__title-second">Apart from eating burger</p>
+            </h2>
+        </div>
+        <p class="footer__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum et quod ipsam
+            explicabo quidem cupiditate necessitatibus quae praesentium tempore animi.</p>
+        <div class="footer__contact">
+            <div class="footer__contact-container">
+                <h2 class="footer__contact-title">
+                    Sent Mail
+                </h2>
+                <p class="footer__contact-description">info@portfolio.com</p>
+            </div>
+            <div class="footer__contact-container">
+                <h2 class="footer__contact-title">Make call</h2>
+                <p class="footer__contact-description">+123 456 7890</p>
+            </div>
+            <div class="footer__contact-container">
+                <h2 class="footer__contact-title">Get in touch</h2>
+                <p class="footer__contact-description">123/A</p>
+            </div>
+        </div>
+        <span class="footer__line"></span>
+        <p class="footer__copyrights">2019 &copy; All Rights Reserved</p>
+    </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
 
 

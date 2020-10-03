@@ -84,7 +84,7 @@
         }
 
         p:nth-of-type(1) {
-            font-size: 2.2em;
+            font-size: 1.8em;
 
             @include media768px {
                 font-size: 3.5em;
@@ -100,7 +100,7 @@
         }
 
         p:nth-of-type(2) {
-            font-size: 1.8em;
+            font-size: 1.6em;
 
             @include media768px {
                 font-size: 2.3em;
@@ -117,6 +117,7 @@
     }
 
     &__section:nth-child(odd) {
+
         @include media1024px {
             height: 22vh;
             width: 50vw;
@@ -184,6 +185,7 @@
     }
 
     &__section:nth-child(even) {
+
         @include media1024px {
             height: 41vh;
             width: 30vw;
@@ -235,12 +237,17 @@
 
         &-first {
             padding-top: 50px;
-            order: 1;
+
+            @include media1024px {
+                order: 1;
+            }
 
         }
 
         &-second {
-            order: 2;
+            @include media1024px {
+                order: 2;
+            }
 
             span {
                 width: 95%;
@@ -269,7 +276,6 @@
         }
 
         &-first {
-            order: 4;
             padding-top: 50px;
 
             @include media1024px {
@@ -277,6 +283,7 @@
                 right: -40%;
                 background-color: $main-color;
                 color: white;
+                order: 4;
 
                 span {
                     background-color: #fff;
@@ -292,7 +299,6 @@
         }
 
         &-second {
-            order: 3;
             margin-top: 10%;
             border-top: none;
             border-bottom: 1px solid black;
@@ -300,6 +306,7 @@
             @include media1024px {
                 position: relative;
                 left: 8%;
+                order: 3;
             }
 
             span {
@@ -323,13 +330,18 @@
         }
 
         &-first {
-            order: 5;
+            @include media1024px {
+                order: 5;
+            }
         }
 
         &-second {
-            order: 6;
             border-top: none;
             border-bottom: 1px solid black;
+
+            @include media1024px {
+                order: 6;
+            }
 
             span {
                 width: 70%;
@@ -343,7 +355,7 @@
 }
 
 .button {
-    width: 45%;
+    width: 160px;
     text-align: center;
     margin-top: 20px;
     border-radius: 10px;
