@@ -39,3 +39,30 @@ burger = () => {
 
 }
 menuButton.addEventListener('click', burger);
+
+const menuArray = [document.querySelector('.header '), document.querySelector('.aboutUs'), document.querySelector('.exp'), document.querySelector('.portfolio'), document.querySelector('.contact')];
+for (let i = 0; i < listItem.length; i++) {
+    listItem[i].addEventListener('click', () => {
+        menuArray[i].scrollIntoView({
+            behavior: 'smooth'
+        })
+        setTimeout(() => {
+            menuOpen = false;
+            nav.classList.remove('active');
+            body.classList.remove('active');
+            menuButton.classList.remove('open');
+            listItem.forEach(list => {
+                list.classList.remove('active');
+            })
+        }, 600)
+    })
+}
+
+const buttonSrc = document.getElementById('changeSrc');
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 1024) {
+        buttonSrc.src = 'svg/webDesign.svg';
+    } else {
+        buttonSrc.src = 'svg/webDesign-white.svg';
+    }
+})

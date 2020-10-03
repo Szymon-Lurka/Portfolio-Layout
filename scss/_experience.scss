@@ -126,6 +126,7 @@
 
         @include media1366px {
             height: 34vh;
+            width: 35vw;
         }
 
         p:nth-of-type(1) {
@@ -274,6 +275,17 @@
             @include media1024px {
                 position: relative;
                 right: -40%;
+                background-color: $main-color;
+                color: white;
+
+                span {
+                    background-color: #fff;
+                }
+
+                .button {
+                    color: $main-color;
+                    background-color: white;
+                }
             }
 
 
