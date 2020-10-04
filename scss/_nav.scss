@@ -116,7 +116,7 @@
     height: 38px;
     cursor: pointer;
     transition: all .5s ease-in-out;
-    z-index: 2;
+    z-index: 99999;
 
     @media(min-width:1024px) {
         display: none;
