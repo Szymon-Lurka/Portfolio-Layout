@@ -59,6 +59,14 @@ document.querySelector('.header__btn').addEventListener('click', () => {
 
 const buttonSrc = document.getElementById('changeSrc');
 const navImage = document.querySelector('.nav__background');
+const portfolioClicker = (item) => {
+    item.addEventListener('click', () => {
+        item.classList.add('active');
+        setTimeout(() => {
+            item.classList.remove('active');
+        }, 4000)
+    })
+}
 window.addEventListener('resize', () => {
     if (window.innerWidth < 1024) {
         buttonSrc.src = 'svg/webDesign.svg';
@@ -67,25 +75,25 @@ window.addEventListener('resize', () => {
         buttonSrc.src = 'svg/webDesign-white.svg';
         navImage.classList.add('img-none')
     }
-    if (window.innerwidth > 1023) return;
+    if (window.innerwidth >= 1024) portfolioImages.forEach(item => {
+        item.removeEventListener('click', portfolioClicker(item));
+    })
     else {
         portfolioImages.forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.add('active');
-                setTimeout(() => {
-                    item.classList.remove('active');
-                }, 4000)
-            })
+            item.addEventListener('click', portfolioClicker(item))
         })
     }
-
 })
 
 window.addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth > 1023) {
-
+    if (window.innerWidth >= 1024) {
         navImage.classList.add('img-none');
         buttonSrc.src = 'svg/webDesign-white.svg'
+    } else {
+
+        portfolioImages.forEach(item => {
+            item.addEventListener('click', portfolioClicker(item))
+        })
 
     }
 })

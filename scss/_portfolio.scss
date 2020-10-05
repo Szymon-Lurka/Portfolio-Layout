@@ -204,7 +204,8 @@
             }
 
             &:nth-of-type(2) {
-                background: url(../svg/portfolioRandom.svg);
+                background: url(../svg/portfolioRandom.svg) center;
+                background-size: cover;
             }
 
             &.active:nth-of-type(2) {
@@ -231,7 +232,8 @@
             }
 
             &:nth-of-type(4) {
-                background: url(../svg/UXportfolio.svg);
+                background: url(../svg/UXportfolio.svg) center;
+                background-size: cover;
             }
 
             &.active:nth-of-type(4) {

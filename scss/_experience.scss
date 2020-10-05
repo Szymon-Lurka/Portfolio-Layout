@@ -147,6 +147,7 @@
     }
 
     &__section:nth-child(odd) {
+        height: 60vh;
 
         @include media1024px {
             height: 24vh;
@@ -163,7 +164,6 @@
         }
 
         div {
-
             p:nth-of-type(1) {
                 font-size: 3.5em;
                 text-align: center;
