@@ -17,11 +17,13 @@ burger = () => {
             menuButton.classList.add('open');
             nav.classList.add('active');
             nav.classList.remove('close');
+            body.classList.add('active');
         } else {
             menuOpen = false;
             menuButton.classList.remove('open');
             nav.classList.remove('active');
             nav.classList.add('close');
+            body.classList.remove('active');
         }
     } else return;
 
@@ -43,8 +45,17 @@ for (let i = 0; i < listItem.length; i++) {
         nav.classList.remove('active');
         nav.classList.add('close');
         menuButton.classList.remove('open');
+        body.classList.remove('active');
     })
 };
+
+// Button scrolling one section down
+document.querySelector('.header__btn').addEventListener('click', () => {
+    menuArray[1].scrollIntoView({
+        behavior: 'smooth',
+    })
+})
+
 
 const buttonSrc = document.getElementById('changeSrc');
 const navImage = document.querySelector('.nav__background');

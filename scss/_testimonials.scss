@@ -85,9 +85,9 @@
         }
 
         @include media1800px {
-            width: 40%;
+            width: 30%;
             top: 0;
-            left: 18%;
+            left: 38%;
         }
     }
 
@@ -95,6 +95,10 @@
         top: 50%;
         left: 5%;
         z-index: -1;
+
+        @include media1800px {
+            left: 20%;
+        }
     }
 
     &__background {

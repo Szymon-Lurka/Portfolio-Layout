@@ -7,5 +7,10 @@ body {
     width: 100vw;
     max-width: 100%;
     transition: .5s ease-in-out;
+    overflow: visible;
     overflow-x: hidden;
+
+    &.active {
+        overflow: hidden;
+    }
 }

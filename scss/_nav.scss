@@ -24,7 +24,7 @@
         }
     }
 
-    @media(min-width:1024px) {
+    @include media1024px {
         position: absolute;
         width: 100vw;
         height: 200px;
@@ -55,7 +55,7 @@
             grid-template-columns: repeat(5, 140px);
             justify-items: flex-start;
             align-items: center;
-            padding-left: 23%;
+            padding-left: 27%;
         }
 
         @include media1366px {
@@ -63,7 +63,7 @@
         }
 
         @include media1800px {
-            padding-left: 53%;
+            padding-left: 56%;
         }
     }
 
@@ -75,15 +75,14 @@
 
 
         .home {
-            font-weight: bold;
             font-size: 2em;
 
             @include media768px {
-                font-size: 6em;
+                font-size: 4em;
             }
 
             @include media1024px {
-                font-size: 2em;
+                font-size: 1.5em;
             }
         }
     }
@@ -94,17 +93,18 @@
         text-decoration: none;
         color: rgb(65, 65, 65);
         font-size: 2em;
+        font-weight: 400;
+
+        &:hover {
+            font-weight: 700;
+        }
 
         @include media768px {
             font-size: 4em;
         }
 
         @include media1024px {
-            font-size: 1.5em;
-        }
-
-        @include media1366px {
-            font-size: 1.5em;
+            font-size: 1.5em
         }
     }
 }
