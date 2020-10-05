@@ -216,6 +216,7 @@
     }
 
     &__section:nth-child(even) {
+        height: 75vh;
 
         @include media1024px {
             height: 41vh;

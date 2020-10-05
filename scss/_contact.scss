@@ -7,6 +7,10 @@
         margin-top: 100px;
     }
 
+    @include media1366px {
+        margin-top: 50px;
+    }
+
     &__title {
         text-align: center;
         color: $main-color;
@@ -24,6 +28,10 @@
         justify-content: space-evenly;
         margin: 0 auto;
 
+        @include media1024px {
+            width: 60vw;
+        }
+
         &-nameInput,
         &-emailInput,
         &-phoneInput,
@@ -38,6 +46,8 @@
 
             @include media1024px {
                 flex-basis: 40%;
+                margin-bottom: 25px;
+                padding: 15px;
             }
         }
 
@@ -49,6 +59,11 @@
             padding: 5px;
             font-size: 2em;
             text-align: center;
+
+            @include media1024px {
+                text-align: left;
+                padding: 10px;
+            }
         }
 
         &-submitInput {

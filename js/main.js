@@ -34,7 +34,7 @@ for (let i = 0; i < listItem.length; i++) {
     listItem[i].addEventListener('click', () => {
         setTimeout(() => {
             menuArray[i].scrollIntoView({
-                behavior: 'smooth'
+                behavior: 'smooth',
             })
         }, 300);
 

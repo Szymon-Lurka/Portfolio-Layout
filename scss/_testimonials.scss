@@ -166,7 +166,7 @@
     &__container {
         display: flex;
         flex-direction: column;
-        width: 50vw;
+        width: 80vw;
         margin: -5% auto 0 auto;
         margin-top: -5%;
 
@@ -224,10 +224,15 @@
                 height: 120px;
             }
 
+            @include media1366px {
+                width: 100px;
+                height: 100px;
+            }
+
             &:nth-of-type(1) {
                 position: relative;
-                top: -10px;
-                left: 35px;
+                top: -7px;
+                left: 45px;
                 z-index: -1;
                 filter: brightness(65%);
                 transform: scale(0.7);
@@ -239,8 +244,8 @@
 
             &:nth-of-type(3) {
                 position: relative;
-                top: -10px;
-                right: 35px;
+                top: -7px;
+                right: 45px;
                 z-index: -1;
                 filter: brightness(65%);
                 transform: scale(0.7);
