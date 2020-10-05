@@ -174,17 +174,27 @@
 
     &__button {
         position: absolute;
-        bottom: 30px;
-        text-align: center;
         left: 50%;
         transform: translateX(-50%);
+        width: 160px;
+        padding: 20px;
+        font-size: 1.8em;
+        margin: 20px auto;
+        background-color: #27DEBF;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 10px;
+
 
         @include media768px {
             bottom: 15px;
         }
 
         @include media1024px {
-            // width: 200px;
+            width: 200px;
+            margin-bottom: 40px;
         }
 
         @include media1366px {
