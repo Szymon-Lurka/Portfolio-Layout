@@ -29,6 +29,10 @@
     }
 
     &__medium-green {
+        width: 14%;
+        top: 18%;
+        left: 50%;
+
         @include media1024px {
             top: 34%;
             left: 50%;
@@ -133,7 +137,7 @@
     }
 
     &__title {
-        font-size: 3.5em;
+        font-size: 3em;
         align-self: flex-end;
         flex-basis: 20%;
         padding-top: 50px;
@@ -162,8 +166,9 @@
         }
 
         &-description {
-            font-size: 2em;
+            font-size: 1.6em;
             font-weight: 400;
+            margin-top: -10%;
 
             @include media768px {
                 font-size: 2.3em;

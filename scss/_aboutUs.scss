@@ -97,19 +97,19 @@
         @include media1024px {
             width: 7%;
             left: 140px;
-            top: 10px;
+            top: 40px;
         }
 
         @include media1366px {
             width: 7%;
             top: 0;
-            left: 290px;
+            left: 270px;
         }
 
         @include media1800px {
             width: 5%;
-            top: 0;
-            left: 460px;
+            top: 5px;
+            left: 440px;
         }
     }
 
@@ -138,6 +138,7 @@
         }
 
         @include media1024px {
+            margin-bottom: 20px;
             text-align: left;
             font-size: 1em;
         }
@@ -170,6 +171,7 @@
             text-align: left;
             width: 80vw;
             font-size: 2.1em;
+            margin: 20px auto;
         }
 
         @include media1800px {
@@ -197,7 +199,7 @@
             text-align: left;
             font-size: 1.8em;
             padding: 0;
-            margin-bottom: 0;
+            margin: 20px auto;
         }
 
         @include media1366px {
@@ -207,6 +209,12 @@
         @include media1800px {
             font-size: 2.2em;
         }
+
+        &-second {
+            @include media1024px {
+                margin-bottom: 20px;
+            }
+        }
     }
 
     &__button {
@@ -214,7 +222,7 @@
         left: 15%;
         padding: 24px;
         background-color: $main-color;
-        border-radius: 15px;
+        border-radius: 8px;
         text-decoration: none;
         font-size: 2em;
         color: white;

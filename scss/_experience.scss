@@ -89,11 +89,17 @@
         img {
             position: relative;
             top: 6%;
-            left: 5%;
+            left: 10%;
             width: 25%;
+            margin-bottom: 20px;
 
             @include media768px {
                 width: 20%;
+            }
+
+            @include media1024px {
+                left: 10%;
+                margin-bottom: 20px;
             }
 
             @include media1800px {
@@ -103,6 +109,7 @@
 
         p:nth-of-type(1) {
             font-size: 1.8em;
+            margin-left: 7%;
 
             @include media768px {
                 font-size: 3.5em;
@@ -110,6 +117,7 @@
 
             @include media1024px {
                 font-size: 3.3em;
+                margin-left: 7%;
             }
 
             @include media1800px {
@@ -119,6 +127,7 @@
 
         p:nth-of-type(2) {
             font-size: 1.6em;
+            margin-left: 7%;
 
             @include media768px {
                 font-size: 2.3em;
@@ -127,6 +136,8 @@
             @include media1024px {
                 font-size: 1.6em;
                 height: 60px;
+                margin-left: 7%;
+                width: 87%;
             }
 
             @include media1800px {
@@ -146,7 +157,7 @@
         }
 
         @include media1366px {
-            height: 50vh;
+            height: 55vh;
             width: 35vw;
             flex-basis: 40%;
         }
@@ -160,6 +171,9 @@
                 @include media1024px {
                     font-size: 2.7em;
                     text-align: left;
+                    font-weight: 700;
+                    margin-left: 15px;
+
                 }
 
                 @include media1366px {
@@ -178,10 +192,11 @@
                 @include media1024px {
                     font-size: 1.8em;
                     text-align: left;
+                    margin: auto auto -30px 15px;
                 }
 
                 @include media1366px {
-                    font-size: 1.5em;
+                    font-size: 2.3em;
                 }
 
                 @include media1800px {
@@ -195,11 +210,9 @@
             text-align: center;
 
             @include media1024px {
-                font-size: 2.7em;
-            }
-
-            @include media1366px {
-                font-size: 2.5em;
+                font-size: 4.5em;
+                text-align: left;
+                margin-left: 15px;
             }
         }
 
@@ -207,15 +220,16 @@
 
         span {
             position: relative;
-            height: 2.5px;
+            height: 4px;
             background-color: $main-color;
+            margin-left: 15px;
 
             &::after {
                 content: '';
                 position: absolute;
                 left: 100%;
-                height: 2.5px;
-                background-color: lighten($main-color, 30%);
+                height: 4px;
+                background-color: darken($main-color, 20%);
             }
         }
     }
@@ -230,30 +244,43 @@
         }
 
         @include media1366px {
-            height: 68vh;
+            height: 77vh;
             flex-grow: 0;
         }
 
         span {
             position: relative;
+            display: inline-block;
             width: 25px;
-            height: 2.5px;
+            height: 4px;
             background-color: $main-color;
+            margin: -10px auto 23px 7%;
 
             @include media768px {
                 width: 40px;
             }
 
+            @include media1024px {
+                margin-top: -32px;
+                margin-bottom: 23px;
+                margin: -25px auto 23px 7%;
+                width: 25px;
+            }
+
             &::before,
             &::after {
                 content: '';
-                height: 2.5px;
+                height: 4px;
                 width: 25px;
                 background-color: $main-color;
                 position: absolute;
 
                 @include media768px {
                     width: 40px;
+                }
+
+                @include media1024px {
+                    width: 25px;
                 }
             }
 
@@ -285,7 +312,7 @@
             }
 
             span {
-                width: 95%;
+                width: 85%;
 
                 &::after {
                     width: 5%;
@@ -345,7 +372,7 @@
             }
 
             span {
-                width: 85%;
+                width: 75%;
 
                 &::after {
                     width: 15%;
@@ -376,7 +403,7 @@
             }
 
             span {
-                width: 70%;
+                width: 60%;
 
                 &::after {
                     width: 30%;
@@ -397,9 +424,11 @@
     color: white;
     font-size: 1.8em;
     order: 7;
+    margin-left: 7%;
 
     @include media1024px {
         width: 160px;
+        margin-left: 7%;
     }
 
     @include media1800px {

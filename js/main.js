@@ -67,6 +67,18 @@ window.addEventListener('resize', () => {
         buttonSrc.src = 'svg/webDesign-white.svg';
         navImage.classList.add('img-none')
     }
+    if (window.innerwidth > 1023) return;
+    else {
+        portfolioImages.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.add('active');
+                setTimeout(() => {
+                    item.classList.remove('active');
+                }, 4000)
+            })
+        })
+    }
+
 })
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -79,12 +91,3 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 const portfolioImages = [...document.querySelectorAll('.portfolio__container-wrapper')];
-
-portfolioImages.forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.add('active');
-        setTimeout(() => {
-            item.classList.remove('active');
-        }, 4000)
-    })
-})

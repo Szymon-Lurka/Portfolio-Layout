@@ -175,6 +175,7 @@
     &__button {
         position: absolute;
         bottom: 30px;
+        text-align: center;
         left: 50%;
         transform: translateX(-50%);
 
@@ -183,7 +184,7 @@
         }
 
         @include media1024px {
-            width: 200px;
+            // width: 200px;
         }
 
         @include media1366px {
