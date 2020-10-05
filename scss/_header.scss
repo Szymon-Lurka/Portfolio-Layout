@@ -76,9 +76,9 @@
         }
 
         @include media1366px {
-            width: 50%;
-            left: 30%;
-            top: 15%;
+            width: 30%;
+            left: 40%;
+            top: 25%;
         }
 
         @include media1800px {
@@ -94,6 +94,11 @@
         left: -30%;
         top: 40%;
         width: 50%;
+
+        @include media1366px {
+            width: 30%;
+            left: -10%;
+        }
 
         @include media1800px {
             top: 40%;
@@ -183,8 +188,8 @@
         }
 
         @include media1366px {
-            width: 40%;
-            right: 0;
+            width: 35%;
+            right: 6%;
         }
 
         @include media1800px {
