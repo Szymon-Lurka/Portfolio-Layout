@@ -6,11 +6,12 @@
 
 
     @include media1024px {
-        height: 60vh;
+        min-height: 60vh;
+        padding-bottom: 50px;
     }
 
     @include media1366px {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     &-background {
@@ -44,7 +45,7 @@
         text-align: center;
 
         @include media1024px {
-            font-size: 2em;
+            font-size: 1.4em;
         }
     }
 
@@ -54,7 +55,7 @@
         font-weight: bold;
 
         @include media1024px {
-            font-size: 2.8em;
+            font-size: 3em;
         }
     }
 
@@ -85,12 +86,7 @@
             }
 
             @include media1024px {
-                flex-basis: 25%;
-            }
-
-            @include media1366px {
-                flex-basis: 23%;
-
+                flex-basis: 26%;
             }
 
 
@@ -132,7 +128,7 @@
                 margin: 5%;
 
                 @include media1024px {
-                    font-size: 1.8em;
+                    font-size: 1.4em;
                 }
             }
 
@@ -183,6 +179,14 @@
 
         @include media768px {
             bottom: 15px;
+        }
+
+        @include media1024px {
+            width: 200px;
+        }
+
+        @include media1366px {
+            width: 250px;
         }
     }
 }

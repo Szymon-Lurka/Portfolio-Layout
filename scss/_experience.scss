@@ -3,30 +3,24 @@
     margin-top: 50px;
     padding-bottom: 50px;
     font-family: $josefinFont;
-    display: grid;
-    grid-template-rows: 200px auto auto auto auto;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
 
     @include media1024px {
-        grid-template-columns: 40% 40%;
-        grid-template-rows: 100px repeat(3, 535px);
-        grid-template-areas: "title title"
-            "web-design web-design"
-            "graphic graphic"
-            "web-dev web-dev"
-            "button button";
-        grid-gap: 30px;
-    }
-
-    @include media1800px {
-        grid-template-rows: 100px repeat(3, 650px);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     &__container {
         @include media1024px {
-            grid-area: title;
             position: relative;
             width: 100vw;
+        }
+
+        @include media1366px {
+            flex-basis: 100%;
         }
     }
 
@@ -36,6 +30,14 @@
 
         @include media768px {
             font-size: 2.4em;
+        }
+
+        @include media1024px {
+            font-size: 1.8em;
+        }
+
+        @include media1800px {
+            font-size: 2.5em;
         }
 
 
@@ -49,6 +51,14 @@
 
         @include media768px {
             font-size: 2.8em;
+        }
+
+        @include media1024px {
+            font-size: 4em;
+        }
+
+        @include media1800px {
+            font-size: 4.5em;
         }
     }
 
@@ -81,6 +91,10 @@
             @include media768px {
                 width: 20%;
             }
+
+            @include media1800px {
+                width: 15%;
+            }
         }
 
         p:nth-of-type(1) {
@@ -91,11 +105,11 @@
             }
 
             @include media1024px {
-                font-size: 2.7em;
+                font-size: 3.3em;
             }
 
-            @include media1366px {
-                font-size: 2.5em;
+            @include media1800px {
+                font-size: 4em;
             }
         }
 
@@ -107,11 +121,12 @@
             }
 
             @include media1024px {
-                font-size: 2.2em;
+                font-size: 1.6em;
+                height: 60px;
             }
 
-            @include media1366px {
-                font-size: 2em;
+            @include media1800px {
+                font-size: 2.4em;
             }
         }
     }
@@ -119,15 +134,55 @@
     &__section:nth-child(odd) {
 
         @include media1024px {
-            height: 22vh;
+            height: 24vh;
             width: 50vw;
             justify-self: center;
             align-self: center;
+            flex-basis: 40%;
         }
 
         @include media1366px {
-            height: 34vh;
+            height: 45vh;
             width: 35vw;
+        }
+
+        div {
+
+            p:nth-of-type(1) {
+                font-size: 3.5em;
+                text-align: center;
+
+                @include media1024px {
+                    font-size: 2.7em;
+                    text-align: left;
+                }
+
+                @include media1366px {
+                    font-size: 2.3em;
+                }
+
+                @include media1800px {
+                    font-size: 3.8em;
+                }
+            }
+
+            p:nth-of-type(2) {
+                font-size: 2.5em;
+                text-align: center;
+
+                @include media1024px {
+                    font-size: 1.8em;
+                    text-align: left;
+                }
+
+                @include media1366px {
+                    font-size: 1.5em;
+                }
+
+                @include media1800px {
+                    font-size: 2.7em;
+                }
+            }
         }
 
         p:nth-of-type(1) {
@@ -143,31 +198,7 @@
             }
         }
 
-        p:nth-of-type(2) {
-            font-size: 3.5em;
-            text-align: center;
 
-            @include media1024px {
-                font-size: 2.7em;
-            }
-
-            @include media1366px {
-                font-size: 2.3em;
-            }
-        }
-
-        p:nth-of-type(3) {
-            font-size: 2.5em;
-            text-align: center;
-
-            @include media1024px {
-                font-size: 1.8em;
-            }
-
-            @include media1366px {
-                font-size: 1.5em;
-            }
-        }
 
         span {
             position: relative;
@@ -189,10 +220,11 @@
         @include media1024px {
             height: 41vh;
             width: 30vw;
+            flex-basis: 40%;
         }
 
         @include media1366px {
-            height: 55vh;
+            height: 75vh;
         }
 
         span {
@@ -231,10 +263,6 @@
     &__webSection {
         position: relative;
 
-        @include media1024px {
-            grid-area: web-design;
-        }
-
         &-first {
             padding-top: 50px;
 
@@ -271,22 +299,23 @@
 
     &__graphicSection {
 
-        @include media1024px {
-            grid-area: graphic;
-        }
-
         &-first {
             padding-top: 50px;
 
             @include media1024px {
                 position: relative;
-                right: -40%;
                 background-color: $main-color;
                 color: white;
                 order: 4;
 
                 span {
-                    background-color: #fff;
+                    background-color: #fff !important;
+
+                    &::before,
+                    &::after {
+                        background-color: #fff !important;
+                    }
+
                 }
 
                 .button {
@@ -305,7 +334,6 @@
 
             @include media1024px {
                 position: relative;
-                left: 8%;
                 order: 3;
             }
 
@@ -325,9 +353,6 @@
     }
 
     &__devSection {
-        @include media1024px {
-            grid-area: web-dev;
-        }
 
         &-first {
             @include media1024px {
@@ -370,6 +395,10 @@
         width: 160px;
     }
 
+    @include media1800px {
+        width: 200px;
+    }
+
     .fas {
         margin-left: 10px;
         text-align: center;
@@ -380,10 +409,11 @@
 
 .exp__button {
     margin: 0 auto;
+    border-radius: 0;
 
     @include media1024px {
-        grid-area: button;
-        width: 20%;
-        margin: 0 auto 0 80%;
+        margin: 0 40%;
+        flex-basis: 100%;
+        width: 200px;
     }
 }

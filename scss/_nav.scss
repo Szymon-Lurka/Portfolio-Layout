@@ -76,14 +76,14 @@
 
         .home {
             font-weight: bold;
-            font-size: 4em;
+            font-size: 2em;
 
             @include media768px {
                 font-size: 6em;
             }
 
             @include media1024px {
-                font-size: 4em;
+                font-size: 2em;
             }
         }
     }
@@ -100,7 +100,11 @@
         }
 
         @include media1024px {
-            font-size: 2em;
+            font-size: 1.5em;
+        }
+
+        @include media1366px {
+            font-size: 1.5em;
         }
     }
 }

@@ -18,24 +18,25 @@
         }
     }
 
-    @include media1366px {
-        height: 100vh;
-    }
-
     &__text {
         height: 100px;
         margin-bottom: 50px;
 
         @include media1366px {
-            margin-bottom: 150px;
+            margin-bottom: 30px;
         }
 
         &-title {
             text-align: center;
             color: $main-color;
 
+            @include media1024px {
+                font-size: 2em;
+                margin-bottom: -30px;
+            }
+
             @include media1366px {
-                font-size: 2.4em;
+                font-size: 2em;
             }
         }
 
@@ -43,8 +44,9 @@
             text-align: center;
             font-size: 3em;
 
-            @include media1366px {
-                font-size: 3.6em;
+            @include media1024px {
+                font-size: 4em;
+                margin-bottom: -10px;
             }
         }
 
@@ -52,8 +54,12 @@
             text-align: center;
             font-size: 1.5em;
 
+            @include media1024px {
+                font-size: 1em;
+            }
+
             @include media1366px {
-                font-size: 2em;
+                font-size: 1em;
             }
         }
     }
