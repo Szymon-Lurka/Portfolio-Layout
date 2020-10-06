@@ -228,9 +228,12 @@
         text-align: center;
 
         &-container {
-            width: 100vw;
-            text-align: center;
-            margin-top: 70px;
+            @media (max-width:768px) {
+                margin-top: 70px;
+                width: 100vw;
+                text-align: center;
+
+            }
         }
 
         @include media768px {
