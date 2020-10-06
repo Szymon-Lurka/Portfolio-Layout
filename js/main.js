@@ -69,10 +69,10 @@ const portfolioClicker = (item) => {
 }
 window.addEventListener('resize', () => {
     if (window.innerWidth < 1024) {
-        buttonSrc.src = 'svg/webDesign.svg';
+        buttonSrc.src = 'svg/experience-background2.svg';
         navImage.classList.remove('img-none')
     } else {
-        buttonSrc.src = 'svg/webDesign-white.svg';
+        buttonSrc.src = 'svg/experience-background2-white.svg';
         navImage.classList.add('img-none')
     }
     if (window.innerwidth >= 1024) portfolioImages.forEach(item => {
@@ -88,7 +88,7 @@ window.addEventListener('resize', () => {
 window.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth >= 1024) {
         navImage.classList.add('img-none');
-        buttonSrc.src = 'svg/webDesign-white.svg'
+        buttonSrc.src = 'svg/experience-background2-white.svg'
     } else {
 
         portfolioImages.forEach(item => {

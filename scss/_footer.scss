@@ -32,7 +32,8 @@
         @include media1024px {
             flex-basis: 60%;
             text-align: right;
-            margin: 0 20px auto;
+            margin: 0 20px auto 10%;
+
         }
 
         &-first {
@@ -48,6 +49,8 @@
             margin-top: 0px;
             font-size: 1em;
             font-weight: 400;
+
+
         }
     }
 

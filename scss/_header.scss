@@ -257,7 +257,7 @@
         text-align: center;
         background-color: $main-color;
         border-radius: 40px;
-        line-height: 40px;
+        line-height: 45px;
         cursor: pointer;
 
         &-second {
@@ -267,14 +267,14 @@
             font-weight: bold;
             left: 55%;
             height: 40px;
-            line-height: 40px;
+            line-height: 45px;
 
             @include media768px {
                 font-size: 2em;
                 bottom: 20%;
                 left: 40%;
                 height: 60px;
-                line-height: 60px;
+                line-height: 65px;
             }
 
             @include media1024px {
@@ -299,7 +299,7 @@
             height: 60px;
             font-size: 2em;
             bottom: 20%;
-            line-height: 60px;
+            line-height: 65px;
         }
 
         @include media1024px {
