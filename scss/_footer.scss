@@ -10,6 +10,7 @@
     @include media1024px {
         flex-wrap: wrap;
         flex-direction: row;
+        background: url(../svg/Path-27.svg) no-repeat center;
     }
 
     &__background {
