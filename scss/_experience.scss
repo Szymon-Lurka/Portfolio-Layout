@@ -7,6 +7,17 @@
     flex-direction: column;
     overflow: hidden;
 
+    &::after {
+        content: '';
+        position: absolute;
+        background: url(../svg/dottedSquare.svg);
+        width: 270px;
+        height: 270px;
+        bottom: 0;
+        right: 0;
+        z-index: -2;
+    }
+
     @include media1024px {
         display: flex;
         flex-direction: row;
@@ -76,7 +87,7 @@
         height: 60vh;
         width: 80vw;
         box-shadow: 0px 18px 7px rgba(148, 148, 148, 0.315);
-        border-radius: 15px;
+        border-radius: 8px;
         padding-bottom: 50px;
 
 
@@ -393,6 +404,8 @@
         }
 
         &-second {
+
+
 
             @include media1024px {
                 order: 6;
