@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    z-index: -1;
 
     @include media1024px {
         display: flex;
@@ -79,7 +78,7 @@
         box-shadow: 0px 18px 7px rgba(148, 148, 148, 0.315);
         border-radius: 8px;
         padding-bottom: 50px;
-        z-index: 1;
+        z-index: 10;
 
 
 
@@ -107,7 +106,7 @@
             }
 
             @include media1800px {
-                width: 15%;
+                width: 25%;
             }
         }
 
@@ -357,6 +356,20 @@
                 .button {
                     color: $main-color;
                     background-color: white;
+
+                    &:hover {
+                        background-color: $main-color;
+                        color: white;
+
+                        .fas {
+                            animation: expGraphicCardButtonAfter .3s linear both;
+                        }
+                    }
+
+                    .fas {
+                        color: $main-color;
+                        animation: expGraphicCardButtonBefore .3s linear both;
+                    }
                 }
             }
 
@@ -395,11 +408,12 @@
         }
 
         &-second {
-
-
+            position: relative;
 
             @include media1024px {
                 order: 6;
+
+
             }
 
             span {
@@ -432,8 +446,12 @@
         cursor: pointer;
 
         &:hover {
-            background-color: white;
+            background-color: transparent;
             color: $main-color;
+        }
+
+        &:hover .fas {
+            animation: expCardButtonAfter .4s linear both;
         }
     }
 
@@ -446,6 +464,7 @@
         text-align: center;
         margin-top: 2px;
         font-size: 0.8em;
+        animation: expCardButtonBefore .4s linear both;
     }
 }
 

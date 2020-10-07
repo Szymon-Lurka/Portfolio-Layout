@@ -8,6 +8,7 @@
         @include media1024px {
             width: 260px;
             margin: 0 auto;
+            transition: .5s !important;
         }
 
         @include media1366px {
@@ -78,7 +79,6 @@
         }
 
         &-wrapper {
-            //linear-gradient(#27dec071),
             width: 300px;
             height: 300px;
             margin-bottom: 50px;

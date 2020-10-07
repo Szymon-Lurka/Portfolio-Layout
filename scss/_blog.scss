@@ -2,6 +2,7 @@
     font-family: $josefinFont;
     position: relative;
     overflow: hidden;
+    overflow-x: hidden;
     margin-top: 100px;
     // padding-top: 100px;
     padding: 100px auto;
@@ -31,14 +32,18 @@
 
         @include media1024px {
             width: 80%;
-            top: 0;
-            right: -100px;
+            top: -40px;
+            right: -60px;
         }
 
         @include media1366px {
-            width: 75%;
-            right: -100px;
+            width: 70%;
+            right: -80px;
             top: 0px;
+        }
+
+        @include media1800px {
+            width: 60%;
         }
     }
 
@@ -166,9 +171,22 @@
                 padding: 10px;
                 color: $main-color;
                 text-decoration: none;
+                border-radius: 20px;
+                transition: .7s;
 
                 @include media1024px {
                     font-size: 2em;
+
+                    &:hover {
+                        background-color: $main-color;
+                        color: white;
+                        padding: 10px;
+
+                        .fas {
+                            animation: blogButtonAfter .3s linear both;
+
+                        }
+                    }
                 }
 
                 .fas {
@@ -176,6 +194,7 @@
                     font-size: 1em;
                     top: 30%;
                     right: -20%;
+                    animation: blogButtonBefore .3s linear both;
 
                     @include media1024px {
                         top: 25%;
@@ -202,6 +221,7 @@
         text-decoration: none;
         text-align: center;
         border-radius: 10px;
+        transition: .5s;
 
 
         @include media768px {
@@ -210,11 +230,22 @@
 
         @include media1024px {
             width: 200px;
-            margin-top: 20px;
+            // margin-top: 20px;
+            bottom: 200px;
+
+            &:hover {
+                background-color: transparent;
+                color: $main-color;
+            }
         }
 
         @include media1366px {
+            bottom: 100px;
             width: 250px;
+        }
+
+        @include media1800px {
+            bottom: 250px;
         }
     }
 }

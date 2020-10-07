@@ -14,3 +14,27 @@ body {
         overflow: hidden;
     }
 }
+
+.scroller {
+    display: none;
+    opacity: 0;
+    transition: .6s;
+}
+
+.active {
+    @include media1024px {
+        opacity: 1;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        display: block;
+        z-index: 10;
+        transition: .6s;
+        animation: pulse 1s linear infinite alternate;
+        cursor: pointer;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+}

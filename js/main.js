@@ -96,6 +96,27 @@ window.addEventListener('DOMContentLoaded', () => {
         })
 
     }
-})
 
+
+})
+const contact = document.querySelector('.contact');
+const scroller = document.querySelector('.scroller');
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= 5000) {
+        scroller.classList.add('active');
+        scroller.classList.remove('hidden');
+    } else if (window.scrollY < 1024) {
+        scroller.classList.remove('active');
+    }
+})
+scroller.addEventListener('click', () => {
+    menuArray[0].scrollIntoView({
+        behavior: 'smooth'
+    })
+})
 const portfolioImages = [...document.querySelectorAll('.portfolio__container-wrapper')];
+
+
+
+
+

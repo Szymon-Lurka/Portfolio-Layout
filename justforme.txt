@@ -1,9 +1,0 @@
-Lista:
-
-1.Przycisk w sekcji blog
-2.hovery przycisków
-3.stopka
-4. dotted square w sekcji experience
-5. fix dotted square w sekcji contact
-6. plywajacy przycisk scrollujacy do gory
-7.sekcja experience graphic-first (grafika się krzaczy)

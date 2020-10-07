@@ -16,18 +16,101 @@
     }
 }
 
-@keyframes loader {
+@keyframes blogButtonBefore {
     0% {
-        transform: scale(0);
-        opacity: 0;
-    }
+        color: $main-color;
 
-    50% {
-        opacity: 1;
+        right: -35%;
+        transform: rotate(180deg);
     }
 
     100% {
+        right: -20%;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes blogButtonAfter {
+    0% {
+        right: -20%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        right: -35%;
+        transform: rotate(180deg);
+        color: $main-color;
+
+    }
+}
+
+@keyframes expCardButtonBefore {
+    0% {
+        margin-left: 15px;
+        transform: rotate(180deg);
+        color: $main-color;
+    }
+
+    100% {
+        margin-left: 10px;
+        transform: rotate(0deg);
+        color: white;
+    }
+}
+
+@keyframes expCardButtonAfter {
+    0% {
+        margin-left: 10px;
+        transform: rotate(0deg);
+        color: white;
+    }
+
+    100% {
+        margin-left: 15px;
+        transform: rotate(180deg);
+        color: $main-color;
+    }
+}
+
+@keyframes expGraphicCardButtonBefore {
+    0% {
+        margin-left: 15px;
+        transform: rotate(180deg);
+        color: white;
+
+    }
+
+    100% {
+        margin-left: 10px;
+        transform: rotate(0deg);
+        color: $main-color;
+
+    }
+}
+
+@keyframes expGraphicCardButtonAfter {
+    0% {
+        margin-left: 10px;
+        transform: rotate(0deg);
+        color: $main-color;
+
+    }
+
+    100% {
+        margin-left: 15px;
+        transform: rotate(180deg);
+        color: white;
+
+
+    }
+}
+
+@keyframes pulse {
+    0% {
         transform: scale(1);
-        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.4);
     }
 }

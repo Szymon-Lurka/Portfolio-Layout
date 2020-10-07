@@ -97,7 +97,7 @@
         @include media1024px {
             width: 9%;
             left: 158px;
-            top: 70px;
+            top: 60px;
         }
 
         @include media1366px {
@@ -108,8 +108,8 @@
 
         @include media1800px {
             width: 5%;
-            top: 5px;
-            left: 440px;
+            top: 20px;
+            left: 455px;
         }
     }
 
@@ -226,7 +226,7 @@
         font-size: 2em;
         color: white;
         text-align: center;
-        transition: .5s;
+        transition: .5s !important;
 
         &-container {
             @media (max-width:768px) {
@@ -239,6 +239,7 @@
             @include media1024px {
                 margin-top: 60px;
             }
+
         }
 
         @include media768px {
@@ -254,10 +255,15 @@
             padding: 17px;
 
             &:hover {
-                background-color: black;
+                background-color: transparent;
+                color: $main-color;
             }
         }
 
+
+        @include media1366px {
+            width: 300px;
+        }
 
     }
 

@@ -28,6 +28,33 @@
         }
     }
 
+    &__small-green:nth-child(2) {
+        top: 52%;
+        left: 92%;
+
+        @include media1366px {
+            top: 52%;
+            left: 92%;
+        }
+    }
+
+    &__small-green:nth-child(3) {
+        top: 79%;
+        left: 80%;
+
+        @include media1366px {
+            top: 92%;
+            left: 95%;
+        }
+    }
+
+    &__small-green:nth-child(4) {
+        @include media1024px {
+            top: 17%;
+            left: 80%;
+        }
+    }
+
     &__medium-green {
         width: 14%;
         top: 18%;
@@ -234,7 +261,7 @@
         }
 
         @include media1366px {
-            width: 120%;
+            width: 100%;
             top: -50%;
             left: 25%;
         }
@@ -314,8 +341,8 @@
             width: 240px;
 
             &:hover {
-                background-color: black;
-                color: white;
+                background-color: transparent;
+                color: $main-color;
             }
         }
 

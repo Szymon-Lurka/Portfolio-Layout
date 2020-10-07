@@ -83,7 +83,8 @@
             }
 
             @include media1800px {
-                flex-basis: 87%;
+                flex-basis: 100%;
+                padding: 15px;
             }
         }
 
@@ -94,7 +95,6 @@
             margin: 25px auto;
 
             @include media1024px {
-                // margin-top: 40px;
                 width: 200px;
             }
         }
