@@ -3,15 +3,17 @@
     position: relative;
     overflow: hidden;
     margin-top: 100px;
-
+    // padding-top: 100px;
+    padding: 100px auto;
 
     @include media1024px {
-        min-height: 60vh;
-        padding-bottom: 50px;
+        min-height: 65vh;
+        padding: 80px auto;
     }
 
     @include media1366px {
-        min-height: 100vh;
+        min-height: 140vh;
+        padding: 300px auto 100px;
     }
 
     &-background {
@@ -28,14 +30,15 @@
         }
 
         @include media1024px {
-            width: 74%;
-            top: 0px;
+            width: 80%;
+            top: 0;
             right: -100px;
         }
 
         @include media1366px {
-            width: 55%;
-            right: 0;
+            width: 75%;
+            right: -100px;
+            top: 0px;
         }
     }
 
@@ -46,6 +49,11 @@
 
         @include media1024px {
             font-size: 1.4em;
+        }
+
+        @include media1366px {
+            margin-top: 100px;
+
         }
     }
 
@@ -68,6 +76,10 @@
             flex-wrap: wrap;
         }
 
+        @include media1366px {
+            margin-top: 100px;
+        }
+
         &-card {
             width: 80vw;
             margin: 0 auto;
@@ -87,6 +99,10 @@
 
             @include media1024px {
                 flex-basis: 26%;
+            }
+
+            @include media1366px {
+                margin-bottom: 30px;
             }
 
 
@@ -194,7 +210,7 @@
 
         @include media1024px {
             width: 200px;
-            margin-bottom: 40px;
+            margin-top: 20px;
         }
 
         @include media1366px {

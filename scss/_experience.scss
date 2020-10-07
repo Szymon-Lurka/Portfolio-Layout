@@ -8,17 +8,6 @@
     overflow: hidden;
     z-index: -1;
 
-    &::after {
-        content: '';
-        position: absolute;
-        background: url(../svg/dottedSquare.svg);
-        width: 270px;
-        height: 270px;
-        bottom: 0;
-        right: 0;
-        z-index: -10;
-    }
-
     @include media1024px {
         display: flex;
         flex-direction: row;
@@ -435,10 +424,17 @@
     color: white;
     font-size: 1.8em;
     order: 7;
+    transition: .5s;
 
     @include media1024px {
         width: 160px;
         margin-left: 7%;
+        cursor: pointer;
+
+        &:hover {
+            background-color: white;
+            color: $main-color;
+        }
     }
 
     @include media1800px {

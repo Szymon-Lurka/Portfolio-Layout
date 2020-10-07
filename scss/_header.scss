@@ -258,6 +258,7 @@
         background-color: $main-color;
         border-radius: 40px;
         line-height: 45px;
+        transition: .5s;
         cursor: pointer;
 
         &-second {
@@ -281,6 +282,12 @@
                 bottom: 51%;
                 width: 240px;
                 left: 33%;
+                cursor: pointer;
+                transition: .5s;
+
+                &:hover {
+                    color: $main-color;
+                }
             }
 
             @include media1366px {
@@ -305,6 +312,11 @@
         @include media1024px {
             bottom: 51%;
             width: 240px;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
         }
 
         @include media1366px {

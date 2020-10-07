@@ -226,6 +226,7 @@
         font-size: 2em;
         color: white;
         text-align: center;
+        transition: .5s;
 
         &-container {
             @media (max-width:768px) {
@@ -251,6 +252,10 @@
             margin-top: 60px;
             font-size: 2em;
             padding: 17px;
+
+            &:hover {
+                background-color: black;
+            }
         }
 
 
