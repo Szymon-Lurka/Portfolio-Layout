@@ -54,7 +54,7 @@
         }
 
         &-textArea {
-            flex-basis: 87%;
+            flex-basis: 86%;
             margin-top: 10px;
             border-radius: 7px;
             border: 1px solid rgb(78, 78, 78);
@@ -65,6 +65,10 @@
             @include media1024px {
                 text-align: left;
                 padding: 10px;
+            }
+
+            @include media1800px {
+                flex-basis: 87%;
             }
         }
 
