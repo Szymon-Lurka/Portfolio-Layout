@@ -25,6 +25,10 @@
         transform: translateX(-50%);
         top: 2%;
 
+        @include media640pxhorizontal {
+            width: 40%;
+        }
+
         @include media768px {
             width: 65%;
         }
@@ -50,6 +54,10 @@
             height: 55%;
             left: 8%;
         }
+
+        @include media823pxhorizontal {
+            width: 40%;
+        }
     }
 
     &__background {
@@ -58,6 +66,10 @@
         top: 0px;
         right: 20px;
         width: 150px;
+
+        @include media640pxhorizontal {
+            right: 150px;
+        }
 
         @include media768px {
             width: 250px;
@@ -80,6 +92,17 @@
         @include media1800px {
             right: 52%;
         }
+
+        @include media823pxhorizontal {
+            width: 185px;
+            right: 180px;
+        }
+
+        @include media1024pxhorizontal {
+            width: 200px;
+            right: 450px;
+            top: 25px;
+        }
     }
 
     &__circle {
@@ -87,6 +110,12 @@
         width: 20%;
         left: 15px;
         top: 13px;
+
+        @include media640pxhorizontal {
+            width: 10%;
+            left: 175px;
+            top: 18px;
+        }
 
         @include media768px {
             left: 105px;
@@ -110,6 +139,18 @@
             width: 5%;
             top: 20px;
             left: 455px;
+        }
+
+        @include media823pxhorizontal {
+            width: 10%;
+            top: 10px;
+            left: 220px;
+        }
+
+        @include media1024pxhorizontal {
+            width: 8%;
+            top: 5px;
+            left: 160px;
         }
     }
 
@@ -240,6 +281,9 @@
                 margin-top: 60px;
             }
 
+            @include media823pxhorizontal {
+                margin: 5% auto auto 7%;
+            }
         }
 
         @include media768px {

@@ -152,6 +152,10 @@
     &__section:nth-child(odd) {
         height: 60vh;
 
+        @include media640pxhorizontal {
+            height: 100vh;
+        }
+
         @include media1024px {
             height: 24vh;
             width: 50vw;
@@ -164,6 +168,10 @@
             height: 55vh;
             width: 35vw;
             flex-basis: 40%;
+        }
+
+        @include media1024pxhorizontal {
+            height: 50vh
         }
 
         div {
@@ -240,6 +248,10 @@
     &__section:nth-child(even) {
         height: 75vh;
 
+        @include media640pxhorizontal {
+            height: 130vh;
+        }
+
         @include media1024px {
             height: 41vh;
             width: 30vw;
@@ -249,6 +261,10 @@
         @include media1366px {
             height: 83vh;
             flex-grow: 0;
+        }
+
+        @include media1024pxhorizontal {
+            height: 70vh;
         }
 
         span {
@@ -439,6 +455,10 @@
     font-size: 1.8em;
     order: 7;
     transition: .5s;
+
+    @include media640pxhorizontal {
+        margin-left: 7%;
+    }
 
     @include media1024px {
         width: 160px;

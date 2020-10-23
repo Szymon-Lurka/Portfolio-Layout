@@ -29,3 +29,25 @@
 }
 
 ;
+
+@mixin media640pxhorizontal {
+    @media(max-width:1023px) and (orientation:landscape) {
+        @content
+    }
+}
+
+;
+
+@mixin media823pxhorizontal {
+    @media(min-width:800px) and (max-width:823px) and (orientation:landscape) {
+        @content
+    }
+}
+
+;
+
+@mixin media1024pxhorizontal {
+    @media(min-width:1024px) and (max-width:1365px) and (orientation:landscape) {
+        @content
+    }
+}

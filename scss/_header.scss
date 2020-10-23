@@ -17,6 +17,10 @@
         top: 75%;
         left: 7%;
 
+        @include media640pxhorizontal {
+            top: 55%;
+        }
+
         @include media1024px {
             top: 80%;
             left: 40%;
@@ -169,6 +173,15 @@
         flex-basis: 20%;
         padding-top: 50px;
 
+        @include media640pxhorizontal {
+            width: 50vw;
+            position: relative;
+            left: -37.5%;
+            flex-basis: 40%;
+        }
+
+
+
         @include media768px {
             font-size: 4.5em;
             width: 70vw;
@@ -190,6 +203,12 @@
 
         @include media1800px {
             margin-top: 10%;
+        }
+
+        @include media823pxhorizontal {
+            left: 0;
+            font-size: 3em;
+            width: 50vw;
         }
 
         &-description {
@@ -223,6 +242,16 @@
         top: 35%;
         right: -10%;
 
+
+
+
+        @include media640pxhorizontal {
+            top: 23%;
+            width: 55%;
+        }
+
+
+
         @include media768px {
             top: 25%;
             width: 80%;
@@ -245,6 +274,19 @@
             right: 0%;
             top: 15%;
         }
+
+        @include media823pxhorizontal {
+            width: 50%;
+            top: 20%;
+        }
+
+        @include media1024pxhorizontal {
+            width: 50%;
+            right: -6%;
+            top: 42%;
+        }
+
+
     }
 
     &__secondBackground {
@@ -253,6 +295,12 @@
         top: -60%;
         left: -60%;
         z-index: -2;
+
+        @include media640pxhorizontal {
+            width: 80%;
+            top: -12%;
+            left: 40%;
+        }
 
         @include media768px {
             width: 150%;
@@ -270,6 +318,18 @@
             width: 70%;
             top: -20%;
             left: 50%;
+        }
+
+        @include media823pxhorizontal {
+            width: 80%;
+            left: 40%;
+            top: -10%;
+        }
+
+        @include media1024pxhorizontal {
+            width: 120%;
+            left: 20%;
+            top: -15%;
         }
     }
 
@@ -296,6 +356,11 @@
             left: 55%;
             height: 40px;
             line-height: 45px;
+
+            @include media640pxhorizontal {
+                bottom: 7%;
+                left: 29%;
+            }
 
             @include media768px {
                 font-size: 2em;
@@ -326,6 +391,19 @@
                 bottom: 50%;
                 left: 18%;
             }
+
+            @include media823pxhorizontal {
+                bottom: 5%;
+                left: 38%;
+            }
+
+            @include media1024pxhorizontal {
+                bottom: 0;
+            }
+        }
+
+        @include media640pxhorizontal {
+            bottom: 7%;
         }
 
         @include media768px {
@@ -352,6 +430,14 @@
 
         @include media1800px {
             bottom: 50%;
+        }
+
+        @include media823pxhorizontal {
+            bottom: 5%;
+        }
+
+        @include media1024pxhorizontal {
+            bottom: 0;
         }
     }
 }

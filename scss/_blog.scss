@@ -247,5 +247,9 @@
         @include media1800px {
             bottom: 250px;
         }
+
+        @include media1024pxhorizontal {
+            bottom: 0;
+        }
     }
 }
