@@ -441,3 +441,13 @@
         }
     }
 }
+
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 3em;
+    font-family: $josefinFont;
+    text-decoration: none;
+    color: $main-color;
+}
